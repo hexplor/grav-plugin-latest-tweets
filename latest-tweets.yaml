@@ -7,3 +7,4 @@ consumerkey: XXX
 consumersecret: XXX
 accesstoken: XXX
 accesstokensecret: XXX
+built_in_css: true

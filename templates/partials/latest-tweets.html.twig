@@ -1,22 +1,26 @@
 {# latesttweets|dump #}
 <div class="latest-tweets">
     {% for item in latesttweets %}
-        <div class="latest-tweets-item-data">
-            {{ item.created_at|date("m/d/Y") }}
-        </div>
-        <div class="latest-tweets-item-avatar">
-            <img src="{{ item.user.profile_image_url }}" alt="{{ item.user.name }}">
-        </div>
         <div class="latest-tweets-item">
-            {{ item.text|raw }}
-        </div>
-        <div class="latest-tweets-item-counts">
-            Retweets:
-            {{ item.retweet_count }}, Favorites:
-            {{ item.favorite_count }}
-        </div>
-        <div class="latest-tweets-item-url">
-            <a href="{{ item.entities.urls[0].url }} ">{{ item.entities.urls[0].url }}</a>
+            <div class="latest-tweets-item-avatar">
+                <img src="{{ item.user.profile_image_url }}" alt="{{ item.user.name }}">
+            </div>
+            <div class="latest-tweets-item-user">
+                {{ item.user.name }}
+            </div>
+            <div class="latest-tweets-item-screen">
+                @{{ item.user.screen_name }} on
+                {{ item.created_at|date("m D Y") }}
+            </div>
+            <div class="latest-tweets-item-text">
+                {{ item.text|raw }}
+            </div>
+            <div class="latest-tweets-item-counts">
+                <i class="fas fa-retweet"></i> {{ item.retweet_count }} <i class="fas fa-heart"></i> {{ item.favorite_count }}
+            </div>
+            <div class="latest-tweets-item-url">
+                <a href="{{ item.entities.urls[0].url }} ">{{ item.entities.urls[0].url }}</a>
+            </div>
         </div>
     {% endfor %}
 </div>

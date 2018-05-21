@@ -1,0 +1,17 @@
+@import "https://use.fontawesome.com/releases/v5.0.13/css/all.css";
+.latest-tweets {
+  display: flex; }
+  .latest-tweets .latest-tweets-item {
+    text-align: center;
+    padding: 2rem; }
+    .latest-tweets .latest-tweets-item img {
+      border-radius: 100%;
+      margin: 2rem 0; }
+    .latest-tweets .latest-tweets-item-user {
+      font-size: 20px;
+      font-weight: bold; }
+    .latest-tweets .latest-tweets-item-screen {
+      font-size: 15px;
+      margin-bottom: 1rem; }
+
+/*# sourceMappingURL=latest-tweets.css.map */
