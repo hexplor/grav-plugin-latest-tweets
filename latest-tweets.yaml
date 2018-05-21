@@ -1,0 +1,9 @@
+enabled: true
+twitter_id: devlomthemes
+tweets_to_display: 5, # Number of tweets you would like to display.
+ignore_replies : true # Ignore replies from the timeline. 
+include_rts: true # Include retweets. 
+consumerkey: XXX
+consumersecret: XXX
+accesstoken: XXX
+accesstokensecret: XXX
