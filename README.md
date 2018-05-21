@@ -51,6 +51,9 @@ accesstokensecret: XX
 
 Note that if you use the admin plugin, a file with your configuration, and named latest-tweets.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.
 
+Usage
+========================
+Use latest-tweets/templates/partials/latest-tweets.html.twig template with built in styling or build your own theme. 
 
 Notes
 ========================
@@ -64,13 +67,11 @@ Credits
 latest-tweets-php-o-auth by andrewbiggart
 https://github.com/andrewbiggart/latest-tweets-php-o-auth
 
-I was orginally using Pixel Acres script (http://f6design.com/journal/2010/10/07/display-recent-twitter-tweets-using-php/). But since Twitter has retired API v1.0, the script no longer worked because it didn't include authentication. I have now modified the script to include authentication using API v1.1.
+Orginally using Pixel Acres script (http://f6design.com/journal/2010/10/07/display-recent-twitter-tweets-using-php/). But since Twitter has retired API v1.0, the script no longer worked because it didn't include authentication. I have now modified the script to include authentication using API v1.1.
 
-The hashtag/username parsing in my example is from Get Twitter Tweets (http://snipplr.com/view/16221/get-twitter-tweets/) by gripnrip (http://snipplr.com/users/gripnrip/).
+The hashtag/username parsing in andrewbiggart example is from Get Twitter Tweets (http://snipplr.com/view/16221/get-twitter-tweets/) by gripnrip (http://snipplr.com/users/gripnrip/).
 
-My RSS parsing is based on replies in the forum discussion "embedding twitter tweets" on the Boagworld website. (http://boagworld.com/forum/comments.php?DiscussionID=4639)
-
-The file caching is based on the AddedBytes article "Caching output in PHP". (http://www.addedbytes.com/articles/for-beginners/output-caching-for-beginners/)
+andrewbiggart RSS parsing is based on replies in the forum discussion "embedding twitter tweets" on the Boagworld website. (http://boagworld.com/forum/comments.php?DiscussionID=4639)
 
 Authentication with Twitter uses twitteroauth. (https://github.com/abraham/twitteroauth)
 
