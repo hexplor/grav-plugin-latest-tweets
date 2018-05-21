@@ -1,13 +1,12 @@
 name: Latest Tweets
 version: 0.1.0
-description: Display latest tweets from your twitter account.
-icon: plug
+description: Display latest tweets from your twitter account using PHP and OAuth.
+icon: twitter
 author:
   name: Karol Orzel
   email: info@devlom.com
 homepage: https://github.com/hexplor/grav-plugin-latest-tweets
-demo: http://demo.yoursite.com
-keywords: grav, plugin, etc
+keywords: grav, plugin, twitter, oauth, latest tweets
 bugs: https://github.com/hexplor/grav-plugin-latest-tweets/issues
 docs: https://github.com/hexplor/grav-plugin-latest-tweets/blob/develop/README.md
 license: MIT
@@ -25,7 +24,52 @@ form:
         0: Disabled
       validate:
         type: bool
-    text_var:
+    twitter_id:
       type: text
-      label: Text Variable
-      help: Text to add to the top of a page
+      label: Twitter ID
+      help: Provide twitter account you would like to display feeds.
+    tweets_to_display:
+      type: number
+      label: Tweets to display
+      help:  Number of tweets you would like to display.
+    ignore_replies:
+      type: toggle
+      label: Ignore Replies
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+    include_rts:
+      type: toggle
+      label: Include Retweets
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+    consumerkey: 
+      type: text
+      label: Consumer Key (API Key)
+      help: Provide consumer key.
+    consumersecret: 
+      type: text
+      label: Consumer Secret (API Secret
+      help: Provide consumer key.
+    accesstoken: 
+      type: text
+      label: Access Token
+      help: Provide consumer key.
+    accesstokensecret:
+      type: text
+      label: Access Token Secret
+      help: Provide consumer key.
+    built_in_css:
+      type: toggle
+      label: Built In CSS
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+
