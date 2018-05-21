@@ -2,7 +2,7 @@
 
 **This README.md file should be modified to describe the features, installation, configuration, and general usage of this plugin.**
 
-The **Latest Tweets** Plugin is for [Grav CMS](http://github.com/getgrav/grav). Display latest tweets from your twitter account.
+The **Latest Tweets** Plugin is for [Grav CMS](http://github.com/getgrav/grav). It will display latest tweets from your twitter account on your [Grav CMS](http://github.com/getgrav/grav) website using PHP and OAuth.
 
 ## Installation
 
@@ -31,8 +31,9 @@ You should now have all the plugin files under
 If you use the admin plugin, you can install directly through the admin plugin by browsing the `Plugins` tab and clicking on the `Add` button.
 
 ## Configuration
-
 Before configuring this plugin, you should copy the `user/plugins/latest-tweets/latest-tweets.yaml` to `user/config/plugins/latest-tweets.yaml` and only edit that copy.
+
+Firstly you will need to register your app / website with Twitters developer site. (https://dev.twitter.com) you will then get your consumer key, consumer secret, access token and your access token secret. You then need to add them to your config file.
 
 Here is the default configuration and an explanation of available options:
 
@@ -50,16 +51,56 @@ accesstokensecret: XX
 
 Note that if you use the admin plugin, a file with your configuration, and named latest-tweets.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.
 
-## Usage
 
-**Describe how to use the plugin.**
+Notes
+========================
 
-## Credits
+Twitter feeds may contain UTF-8 characters. I have found that running PHP’s utf_decode method on tweets didn’t have the expected result, so my recommendation is to instead set the charset of your HTML page to UTF-8. Really we should all be doing this anyway. (http://www.w3.org/International/O-charset)
 
-**Did you incorporate third-party code? Want to thank somebody?**
+
+Credits
+========================
+
+latest-tweets-php-o-auth by andrewbiggart
+https://github.com/andrewbiggart/latest-tweets-php-o-auth
+
+I was orginally using Pixel Acres script (http://f6design.com/journal/2010/10/07/display-recent-twitter-tweets-using-php/). But since Twitter has retired API v1.0, the script no longer worked because it didn't include authentication. I have now modified the script to include authentication using API v1.1.
+
+The hashtag/username parsing in my example is from Get Twitter Tweets (http://snipplr.com/view/16221/get-twitter-tweets/) by gripnrip (http://snipplr.com/users/gripnrip/).
+
+My RSS parsing is based on replies in the forum discussion "embedding twitter tweets" on the Boagworld website. (http://boagworld.com/forum/comments.php?DiscussionID=4639)
+
+The file caching is based on the AddedBytes article "Caching output in PHP". (http://www.addedbytes.com/articles/for-beginners/output-caching-for-beginners/)
+
+Authentication with Twitter uses twitteroauth. (https://github.com/abraham/twitteroauth)
 
 ## To Do
 
 - [ ] Add Blueprints
 - [ ] Add Grav Caching
+
+License
+========================
+
+The MIT License (MIT)
+
+Copyright (c) 2013 Andrew Biggart
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
