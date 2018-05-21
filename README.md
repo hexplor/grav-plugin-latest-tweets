@@ -38,7 +38,7 @@ Here is the default configuration and an explanation of available options:
 
 ```yaml
 enabled: true
-twitter_id: CloakCoin
+twitter_id: twitter_id_goes_here
 tweets_to_display: 4, # Number of tweets you would like to display.
 ignore_replies : true # Ignore replies from the timeline. 
 include_rts: false # Include retweets. 
@@ -60,5 +60,6 @@ Note that if you use the admin plugin, a file with your configuration, and named
 
 ## To Do
 
-- [ ] Future plans, if any
+- [ ] Add Blueprints
+- [ ] Add Grav Caching
 
