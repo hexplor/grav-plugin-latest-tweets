@@ -77,7 +77,6 @@ Authentication with Twitter uses twitteroauth. (https://github.com/abraham/twitt
 
 ## To Do
 
-- [ ] Add Blueprints
 - [ ] Add Grav Caching
 
 License
