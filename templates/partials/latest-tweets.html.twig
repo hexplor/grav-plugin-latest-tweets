@@ -9,17 +9,25 @@
                 {{ item.user.name }}
             </div>
             <div class="latest-tweets-item-screen">
-                @{{ item.user.screen_name }} on
+                @{{ item.user.screen_name }}
+                on
                 {{ item.created_at|date("m D Y") }}
             </div>
             <div class="latest-tweets-item-text">
                 {{ item.text|raw }}
             </div>
             <div class="latest-tweets-item-counts">
-                <i class="fas fa-retweet"></i> {{ item.retweet_count }} <i class="fas fa-heart"></i> {{ item.favorite_count }}
+                <i class="fas fa-retweet"></i>
+                {{ item.retweet_count }}
+                <i class="fas fa-heart"></i>
+                {{ item.favorite_count }}
             </div>
             <div class="latest-tweets-item-url">
-                <a href="{{ item.entities.urls[0].url }} ">{{ item.entities.urls[0].url }}</a>
+                {% if not item.retweeted_status %}
+                    <a href="{{ item.entities.urls[1].url }} ">{{ item.entities.urls[1].url }}</a>
+                {% else %}
+                    <a href="{{ item.retweeted_status.entities.urls[0].url }} ">{{ item.retweeted_status.entities.urls[0].url }}</a>
+                {% endif %}
             </div>
         </div>
     {% endfor %}
