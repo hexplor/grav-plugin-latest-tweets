@@ -1,5 +1,7 @@
 # Latest Tweets Plugin
 
+![Latest Tweets](readme.jpg)
+
 **This README.md file should be modified to describe the features, installation, configuration, and general usage of this plugin.**
 
 The **Latest Tweets** Plugin is for [Grav CMS](http://github.com/getgrav/grav). It will display latest tweets from your twitter account on your [Grav CMS](http://github.com/getgrav/grav) website using PHP and OAuth.
