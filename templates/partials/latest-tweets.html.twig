@@ -3,7 +3,7 @@
     {% for item in latesttweets %}
         <div class="latest-tweets-item">
             <div class="latest-tweets-item-avatar">
-                <img src="{{ item.user.profile_image_url }}" alt="{{ item.user.name }}">
+                <img src="{{ item.user.profile_image_url|replace({"http://":"https://"}) }}" alt="{{ item.user.name }}">
             </div>
             <div class="latest-tweets-item-user">
                 {{ item.user.name }}
