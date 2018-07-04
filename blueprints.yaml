@@ -1,5 +1,5 @@
 name: Latest Tweets
-version: 0.1.2
+version: 0.1.3
 description: Display latest tweets from your twitter account using PHP and OAuth.
 icon: twitter
 author:
