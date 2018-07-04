@@ -39,5 +39,9 @@ class LatestTweetsPlugin extends Plugin
             $this->grav['assets']
                 ->add('plugin://latest-tweets/assets/css/latest-tweets.css');
         }
+        if ($this->config->get('plugins.latest-tweets.fontawesome')) {
+            $this->grav['assets']
+                ->add('https://use.fontawesome.com/releases/v5.0.13/css/all.css');
+        }
     }
 }

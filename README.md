@@ -41,14 +41,16 @@ Here is the default configuration and an explanation of available options:
 
 ```yaml
 enabled: true
-twitter_id: twitter_id_goes_here
-tweets_to_display: 4, # Number of tweets you would like to display.
+twitter_id: devlomthemes #twitter screen name, owner in Access Token settings
+tweets_to_display: 5, # Number of tweets you would like to display.
 ignore_replies : true # Ignore replies from the timeline. 
-include_rts: false # Include retweets. 
-consumerkey: XXX
-consumersecret: XXX
-accesstoken: XXX
-accesstokensecret: XX
+include_rts: true # Include retweets. 
+consumerkey: XXX #Consumer Key (API Key)
+consumersecret: XXX #Consumer Secret (API Secret)
+accesstoken: XXX #Access Token
+accesstokensecret: XXX #Access Token Secret
+built_in_css: true 
+fontawesome: true
 ```
 
 Note that if you use the admin plugin, a file with your configuration, and named latest-tweets.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.

@@ -1,4 +1,3 @@
-@import "https://use.fontawesome.com/releases/v5.0.13/css/all.css";
 .latest-tweets {
   display: flex; }
   .latest-tweets .latest-tweets-item {
@@ -13,5 +12,11 @@
     .latest-tweets .latest-tweets-item-screen {
       font-size: 15px;
       margin-bottom: 1rem; }
+  .latest-tweets .latest-tweets-item-counts {
+    padding: 0.5rem; }
+    .latest-tweets .latest-tweets-item-counts a:first-child {
+      padding-right: 0.5rem; }
+  .latest-tweets .latest-tweets-item-screen {
+    font-size: 0.6rem; }
 
 /*# sourceMappingURL=latest-tweets.css.map */

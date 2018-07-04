@@ -1,6 +1,3 @@
-// Latest Tweets Basic Styling
-@import 'https://use.fontawesome.com/releases/v5.0.13/css/all.css';
- 
 .latest-tweets {
     display: flex;
     .latest-tweets-item {
@@ -19,5 +16,14 @@
             font-size: 15px;
             margin-bottom: 1rem;
         }
+    }
+    .latest-tweets-item-counts {
+        padding: 0.5rem;
+        a:first-child {
+            padding-right: 0.5rem;
+        }
+    }
+    .latest-tweets-item-screen {
+        font-size: 0.6rem;
     }
 }

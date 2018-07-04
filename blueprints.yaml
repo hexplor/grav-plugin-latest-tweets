@@ -72,4 +72,13 @@ form:
       options:
         1: Enabled
         0: Disabled
+    fontawesome:
+      type: toggle
+      label: Enable FontAwesome Icons
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+
 
