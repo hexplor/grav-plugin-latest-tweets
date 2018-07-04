@@ -2,10 +2,14 @@
     {% for item in latesttweets %}
         <div class="latest-tweets-item">
             <div class="latest-tweets-item-avatar">
-                <img src="{{ item.user.profile_image_url|replace({"http://":"https://"}) }}" alt="{{ item.user.name }}">
+                <a href="https://twitter.com/intent/user?screen_name={{ item.user.screen_name }}">
+                    <img src="{{ item.user.profile_image_url_https }}" alt="{{ item.user.name }}">
+                </a>
             </div>
             <div class="latest-tweets-item-user">
-                {{ item.user.name }}
+                <a href="https://twitter.com/intent/user?screen_name={{ item.user.screen_name }}">
+                    {{ item.user.name }}
+                </a>
             </div>
             <div class="latest-tweets-item-screen">
                 @{{ item.user.screen_name }}
@@ -16,24 +20,21 @@
                 {{ item.text|raw }}
             </div>
             <div class="latest-tweets-item-counts">
-                <a href="https://twitter.com/intent/retweet?tweet_id={{ item.id }}" target="_blank">
+                <a href="https://twitter.com/intent/retweet?tweet_id={{ item.id }}">
                     <i class="fas fa-retweet"></i>
                     {{ item.retweet_count }}
                 </a>
-                <a href="https://twitter.com/intent/like?tweet_id={{ item.id }}" target="_blank">
+                <a href="https://twitter.com/intent/like?tweet_id={{ item.id }}">
                     <i class="far fa-heart"></i>
                     {{ item.favorite_count }}
                 </a>
             </div>
-            <div class="latest-tweets-item-url">
-                {% if not item.retweeted_status %}
-                    <a href="{{ item.entities.urls[1].url }} ">{{ item.entities.urls[1].url }}</a>
-                {% else %}
-                    <a href="{{ item.retweeted_status.entities.urls[0].url }} ">{{ item.retweeted_status.entities.urls[0].url }}</a>
-                {% endif %}
-            </div>
+            {% if ltconfig.read_more %}
+                <div class="latest-tweets-item-url">
+                    <a href="https://twitter.com/{{ item.user.screen_name }}/status/{{ item.id }}" target="_blank">{{ ltconfig.read_more }}</a>
+                </div>
+            {% endif %}
         </div>
     {% endfor %}
 </div>
 {# latesttweets|dump #}
-

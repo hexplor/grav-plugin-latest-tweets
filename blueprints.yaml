@@ -1,5 +1,5 @@
 name: Latest Tweets
-version: 0.1.4
+version: 0.1.5
 description: Display latest tweets from your twitter account using PHP and OAuth.
 icon: twitter
 author:
@@ -54,7 +54,7 @@ form:
       help: Provide consumer key.
     consumersecret: 
       type: text
-      label: Consumer Secret (API Secret
+      label: Consumer Secret (API Secret)
       help: Provide consumer key.
     accesstoken: 
       type: text
@@ -80,5 +80,10 @@ form:
       options:
         1: Enabled
         0: Disabled
+    read_more:
+      type: text
+      label: Read More
+      help: Provide Read More label or leave blank for no label.
+      default: Read More...
 
 

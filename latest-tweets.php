@@ -34,6 +34,8 @@ class LatestTweetsPlugin extends Plugin
 
     public function onTwigSiteVariables()
     {
+        //Pass a reference to plugin config
+        $this->grav['twig']->twig_vars['ltconfig'] = $this->config->get('plugins.latest-tweets');
 
         if ($this->config->get('plugins.latest-tweets.built_in_css')) {
             $this->grav['assets']
@@ -43,5 +45,7 @@ class LatestTweetsPlugin extends Plugin
             $this->grav['assets']
                 ->add('https://use.fontawesome.com/releases/v5.0.13/css/all.css');
         }
+        $this->grav['assets']
+                ->add('https://platform.twitter.com/widgets.js');
     }
 }
