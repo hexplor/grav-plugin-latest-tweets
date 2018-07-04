@@ -16,11 +16,11 @@
                 {{ item.text|raw }}
             </div>
             <div class="latest-tweets-item-counts">
-                <a href="https://twitter.com/intent/retweet?tweet_id={{ item.id }}">
+                <a href="https://twitter.com/intent/retweet?tweet_id={{ item.id }}" target="_blank">
                     <i class="fas fa-retweet"></i>
                     {{ item.retweet_count }}
                 </a>
-                <a href="https://twitter.com/intent/like?tweet_id={{ item.id }}">
+                <a href="https://twitter.com/intent/like?tweet_id={{ item.id }}" target="_blank">
                     <i class="far fa-heart"></i>
                     {{ item.favorite_count }}
                 </a>
