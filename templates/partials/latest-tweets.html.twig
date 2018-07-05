@@ -22,11 +22,19 @@
             <div class="latest-tweets-item-counts">
                 <a href="https://twitter.com/intent/retweet?tweet_id={{ item.id }}">
                     <i class="fas fa-retweet"></i>
-                    {{ item.retweet_count }}
+                    {% if item.retweeted_status %}
+                        {{ item.retweeted_status.retweet_count }}
+                    {% else %}
+                        {{ item.retweet_count }}
+                    {% endif %}
                 </a>
                 <a href="https://twitter.com/intent/like?tweet_id={{ item.id }}">
                     <i class="far fa-heart"></i>
-                    {{ item.favorite_count }}
+                    {% if item.retweeted_status %}
+                        {{ item.retweeted_status.favorite_count }}
+                    {% else %}
+                        {{ item.favorite_count }}
+                    {% endif %}
                 </a>
             </div>
             {% if ltconfig.read_more %}

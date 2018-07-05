@@ -1,9 +1,14 @@
+# v0.1.6
+##  07/05/2018
+1. [](#bugfix)
+    * Fix for retweet counts
+
 # v0.1.5
 ##  07/04/2018
 1. [](#bugfix)
     * Open links using intents
     * Minor styling bugfixes
-1. [](#new)
+2. [](#new)
     * Added Read More feature
     * Both image and screen name are now linked
 
