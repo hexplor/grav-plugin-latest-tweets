@@ -2,6 +2,9 @@
 
 ![Latest Tweets](readme.jpg)
 
+
+The **Latest Tweets** Plugin is for [Grav CMS](http://github.com/getgrav/grav). It will display latest tweets from your twitter account on your [Grav CMS](http://github.com/getgrav/grav) website using PHP and OAuth.
+
 ## Features
 * Configurable tweets display
 * Option to ignore replies.
@@ -10,11 +13,7 @@
 * Configruable Read More button
 * Retweet feature
 * Favourite feature
-
-**This README.md file should be modified to describe the features, installation, configuration, and general usage of this plugin.**
-
-The **Latest Tweets** Plugin is for [Grav CMS](http://github.com/getgrav/grav). It will display latest tweets from your twitter account on your [Grav CMS](http://github.com/getgrav/grav) website using PHP and OAuth.
-
+* 
 ## Installation
 
 Installing the Latest Tweets plugin can be done in one of two ways. The GPM (Grav Package Manager) installation method enables you to quickly and easily install the plugin with a simple terminal command, while the manual method enables you to do so via a zip file.
