@@ -13,7 +13,7 @@ The **Latest Tweets** Plugin is for [Grav CMS](http://github.com/getgrav/grav). 
 * Configruable Read More button
 * Retweet feature
 * Favourite feature
-* 
+
 ## Installation
 
 Installing the Latest Tweets plugin can be done in one of two ways. The GPM (Grav Package Manager) installation method enables you to quickly and easily install the plugin with a simple terminal command, while the manual method enables you to do so via a zip file.
